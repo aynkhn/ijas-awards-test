@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>2025 State Expo Awards — IJAS (mockup)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F7F8; --surface:#FFFFFF; --ink:#18212C; --muted:#5B6673; --line:#DCE1E6;
+  --blue:#1F4E8C; --blue-soft:#E6EEF8; --gold:#B8861F; --gold-soft:#FBF3E0;
+  --silver:#8A949E; --bronze:#A0603A; --teal:#23766C; --teal-soft:#E3F2EF;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#10161D; --surface:#17202A; --ink:#E7ECF1; --muted:#9AA6B2; --line:#2A3542;
+    --blue:#7FA8E0; --blue-soft:#1C2B3F; --gold:#E2B654; --gold-soft:#2E2715;
+    --silver:#AEB8C2; --bronze:#D08A5E; --teal:#6CC4B7; --teal-soft:#16302C;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10161D; --surface:#17202A; --ink:#E7ECF1; --muted:#9AA6B2; --line:#2A3542;
+  --blue:#7FA8E0; --blue-soft:#1C2B3F; --gold:#E2B654; --gold-soft:#2E2715;
+  --silver:#AEB8C2; --bronze:#D08A5E; --teal:#6CC4B7; --teal-soft:#16302C;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 "Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Familjen Grotesk","Public Sans",system-ui,sans-serif;margin:0;line-height:1.15}
+header{padding:40px 0 8px}
+h1{font-size:clamp(2rem,5vw,3rem);font-weight:700;letter-spacing:-.02em}
+.sub{color:var(--muted);margin:8px 0 0;max-width:62ch}
+select,input{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 12px}
+select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+
+.controls{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:14px 0;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:20px}
+.controls input[type=search]{flex:1 1 220px;min-width:0}
+.division{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px}
+.division button{font:600 .95rem "Familjen Grotesk",system-ui,sans-serif;border:0;background:transparent;color:var(--muted);padding:8px 16px;border-radius:9px;cursor:pointer}
+.division button[aria-pressed="true"]{background:var(--blue);color:#fff}
+:root[data-theme="dark"] .division button[aria-pressed="true"]{color:#10161D}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .division button[aria-pressed="true"]{color:#10161D}}
+.types{display:flex;flex-wrap:wrap;gap:6px}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;font-size:.9rem;cursor:pointer;user-select:none}
+.chip input{margin:0;accent-color:var(--blue)}
+.count{color:var(--muted);font-size:.9rem;margin:16px 0 0}
+
+section.cat{margin:36px 0}
+.cat-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:2px solid var(--ink);padding-bottom:8px;margin-bottom:14px}
+.cat-head h2{font-size:1.5rem;font-weight:600}
+.cat-head span{color:var(--muted);font-size:.9rem}
+
+/* Honored projects */
+.honors{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:10px;margin-bottom:18px}
+.honor{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.honor.has-epic{border-left-color:var(--blue)}
+.honor.has-isef{border-left-color:var(--gold)}
+.awards{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.aw{display:inline-flex;align-items:center;gap:4px;font-weight:600;font-size:.82rem;line-height:1.3;padding:3px 8px;border-radius:5px;text-decoration:none}
+.aw-epic{background:var(--blue-soft);color:var(--blue)}
+.aw-special{background:var(--teal-soft);color:var(--teal)}
+.aw-isef{background:var(--gold-soft);color:var(--gold)}
+.aw-tf{background:transparent;color:var(--muted);border:1px solid var(--line);padding:2px 7px}
+a.aw:hover{text-decoration:underline;text-underline-offset:2px}
+a.aw svg{width:.8em;height:.8em;flex:none}
+.honor .proj{font-weight:600;line-height:1.3}
+.who{color:var(--muted);font-size:.92rem}
+.who b{color:var(--ink);font-weight:600}
+.meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.8rem;color:var(--muted);margin-top:auto}
+.div{flex:none;font-size:.75rem;font-weight:600;padding:2px 7px;border-radius:5px;line-height:1.4;white-space:nowrap}
+.div.jr{background:var(--teal-soft);color:var(--teal)}
+.div.sr{background:var(--blue-soft);color:var(--blue)}
+.rate{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex:none}
+.dot.gold{background:var(--gold)} .dot.silver{background:var(--silver)}
+.tag{font-size:.78rem;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:1px 6px;white-space:nowrap}
+
+.table-label{font-weight:600;font-size:.95rem;margin:0 0 6px}
+.table-scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.93rem}
+th{text-align:left;font-weight:600;color:var(--muted);font-size:.85rem;padding:6px 10px;border-bottom:1px solid var(--line)}
+td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+td.n{font-weight:500;min-width:9em}
+td.s{color:var(--muted);min-width:10em}
+td .tag{margin-left:6px}
+mark{background:color-mix(in srgb,var(--gold) 35%,transparent);color:inherit;border-radius:2px}
+.more{font:500 .9rem "Public Sans",system-ui,sans-serif;margin-top:8px;border:1px solid var(--line);background:var(--surface);color:var(--blue);border-radius:8px;padding:7px 14px;cursor:pointer}
+.more:hover{background:var(--blue-soft)}
+.empty{background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:28px;text-align:center;color:var(--muted);margin:36px 0}
+.empty button{font:inherit;margin-top:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:8px 14px;cursor:pointer}
+footer{color:var(--muted);font-size:.85rem;padding:32px 0 48px;max-width:70ch}
+@media (max-width:640px){ td.s,th.s{display:none} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>2025 State Expo Awards</h1>
+    <p class="sub">All IJAS Awards from the 2025 State Exposition at UIUC</p>
+  </header>
+
+  <div class="controls">
+    <div class="division" role="group" aria-label="Division">
+      <button type="button" data-div="all" aria-pressed="true">All</button>
+      <button type="button" data-div="sr" aria-pressed="false">Senior (9–12)</button>
+      <button type="button" data-div="jr" aria-pressed="false">Junior (7–8)</button>
+    </div>
+    <input type="search" id="q" placeholder="Search name, school, project, or award" aria-label="Search">
+    <select id="cat" aria-label="Category"><option value="">All categories</option></select>
+    <div class="types" role="group" aria-label="Award type">
+      <label class="chip"><input type="checkbox" value="epic" checked> EPIC</label>
+      <label class="chip"><input type="checkbox" value="special" checked> Special awards</label>
+      <label class="chip"><input type="checkbox" value="gold" checked> Gold</label>
+      <label class="chip"><input type="checkbox" value="silver" checked> Silver</label>
+    </div>
+  </div>
+  <p class="count" id="count" aria-live="polite"></p>
+  <main id="results"></main>
+
+  <footer>2025 IJAS Awards List</footer>
+</div>
+
+<script>
+const DATA_URL = "awards-2025.json";
+let DATA = [], CATS = [];
+const MEDALS=["gold","silver"], MLABEL={gold:"Gold",silver:"Silver"};
+const LINKS={
+ "EPIC":null,
+ "ISEF finalist":"https://www.societyforscience.org/isef/",
+ "Thermo Fisher JIC":"https://www.societyforscience.org/jic/",
+ "Ball Seed":"https://www.ballseed.com/",
+ "Illinois Soybean Association":"https://www.ilsoy.org/",
+ "American Psychological Association":"https://www.apa.org/",
+ "Illinois Psychological Association":"https://www.illinoispsychology.org/",
+ "Illinois Environmental Protection Agency Environmental Excellence Award":"https://epa.illinois.gov/",
+ "Society for In Vitro Biology":"https://sivb.org/",
+ "Association for Women Geoscientists":"https://www.awg.org/",
+ "AEG Special Award":"https://www.aegweb.org/",
+ "ASCE Central Illinois Section":"https://www.asce.org/",
+ "ASCE Illinois Valley Branch":"https://www.asce.org/",
+ "Illinois Section American Water Works Association":"https://www.isawwa.org/",
+ "Illinois Petroleum Resources Board":"https://www.iprb.org/",
+ "Ameren Illinois":"https://www.ameren.com/illinois",
+ "Hanson Professional Services":"https://www.hanson-inc.com/",
+ "Bradley $20k Scholarship":"https://www.bradley.edu/",
+ "U of I Scholarship":"https://illinois.edu/",
+ "Chicago Bears":"https://www.chicagobears.com/",
+ "Chicago Fire Soccer Award":"https://www.chicagofirefc.com/",
+ "The Morton Arboretum Club":"https://mortonarb.org/",
+ "Accelsius Scholarship":"https://accelsius.com/",
+ "IJAS Decal Contest Winner":"https://www.ijas.org/",
+ "IJAS Essay Contest":"https://www.ijas.org/",
+ "IJAS Presidents Grant":"https://www.ijas.org/"
+};
+const EXT='<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M4.5 2.5H2.5v7h7v-2M7 2.5h2.5V5M9.5 2.5 5.5 6.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+function awTag(type,label,text){const u=LINKS[label];const cls="aw aw-"+type;
+  return u?`<a class="${cls}" href="${u}" target="_blank" rel="noopener" title="${esc(label)} (opens in a new tab)">${text}${EXT}</a>`:`<span class="${cls}"${type==="epic"?' title="Exceptional Project in Category"':""}>${text}</span>`}
+const LIMIT=8;
+const $=s=>document.querySelector(s);
+const state={div:"all",q:"",cat:"",types:new Set(["epic","special",...MEDALS])};
+const expanded=new Set();
+
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function hl(s){const t=esc(s);if(!state.q)return t;const q=esc(state.q).replace(/[.*+?^${}()|[\]\\]/g,"\\$&");return t.replace(new RegExp("("+q+")","ig"),"<mark>$1</mark>")}
+const title=e=>e.t||"Untitled project";
+const names=e=>e.n.map(n=>"<b>"+hl(n)+"</b>").join(", ");
+const badge=e=>state.div==="all"?`<span class="div ${e.d}">${e.d==="jr"?"Jr":"Sr"}</span>`:"";
+const badgeFull=e=>state.div==="all"?`<span class="div ${e.d}">${e.d==="jr"?"Junior":"Senior"}</span>`:"";
+const rate=e=>`<span class="rate"><span class="dot ${e.m}"></span>${MLABEL[e.m]}</span>`;
+const tfTag=e=>e.tf?`<span class="tag">Thermo Fisher JIC</span>`:"";
+const chipOf=t=>t==="isef"?"special":t;
+const hasType=(e,t)=>e.h.some(h=>chipOf(h[0])===t);
+const has=(e,t)=>e.h.some(h=>h[0]===t);
+const shownHonors=e=>e.h.filter(h=>state.types.has(chipOf(h[0])));
+const hay=e=>[...e.n,e.s,title(e),e.c,...e.h.map(h=>h[1]),e.tf?"Thermo Fisher JIC":"",MLABEL[e.m]].join(" ").toLowerCase();
+
+
+function render(){
+  const q=state.q.toLowerCase();
+  const rows=DATA.filter(e=>(state.div==="all"||e.d===state.div)&&(!state.cat||e.c===state.cat)&&
+    ((state.types.has("epic")&&hasType(e,"epic"))||(state.types.has("special")&&hasType(e,"special"))||state.types.has(e.m))&&
+    (!q||e._h.includes(q)));
+  const nh=rows.filter(e=>shownHonors(e).length).length;
+  $("#count").textContent=`${rows.length} project${rows.length===1?"":"s"}, ${nh} with special honors`;
+  if(!rows.length){
+    $("#results").innerHTML=`<div class="empty">No projects match${state.q?` “${esc(state.q)}”`:""} with these filters.<br><button type="button" id="reset">Clear search and filters</button></div>`;
+    $("#reset").onclick=()=>{state.q="";state.cat="";state.div="all";state.types=new Set(["epic","special",...MEDALS]);sync();render()};
+    return;
+  }
+  const ord={sr:0,jr:1};
+  let html="";
+  for(const cat of CATS){
+    const g=rows.filter(e=>e.c===cat); if(!g.length)continue;
+    const honored=g.filter(e=>shownHonors(e).length).sort((a,b)=>(has(b,"isef")-has(a,"isef"))||(has(b,"epic")-has(a,"epic"))||(ord[a.d]-ord[b.d]));
+    const rest=g.filter(e=>!shownHonors(e).length).sort((a,b)=>(MEDALS.indexOf(a.m)-MEDALS.indexOf(b.m))||(ord[a.d]-ord[b.d])||title(a).localeCompare(title(b)));
+    html+=`<section class="cat"><div class="cat-head"><h2>${esc(cat)}</h2><span>${g.length} project${g.length>1?"s":""}</span></div>`;
+    if(honored.length){
+      html+=`<div class="honors">`+honored.map(e=>{
+        const hs=shownHonors(e);
+        const pri={isef:0,epic:1,special:2};
+        const aw=[...hs].sort((a,b)=>pri[a[0]]-pri[b[0]]).map(h=>awTag(h[0],h[1],hl(h[1]))).join("")+(e.tf?awTag("tf","Thermo Fisher JIC",hl("Thermo Fisher JIC")):"");
+        const edge=hs.some(h=>h[0]==="isef")?" has-isef":hs.some(h=>h[0]==="epic")?" has-epic":"";
+        return `<div class="honor${edge}"><div class="awards">${aw}</div><div class="proj">${hl(title(e))}</div><div class="who">${names(e)} · ${hl(e.s)}</div><div class="meta">${badgeFull(e)}${rate(e)}</div></div>`;
+      }).join("")+`</div>`;
+    }
+    if(rest.length){
+      const open=!!state.q||expanded.has(cat), shown=open?rest:rest.slice(0,LIMIT);
+      html+=`<p class="table-label">Awards (${rest.length})</p><div class="table-scroll"><table><thead><tr><th>Students</th><th>Project</th><th class="s">School</th><th>Award</th>${state.div==="all"?"<th>Div.</th>":""}</tr></thead><tbody>`+
+        shown.map(e=>`<tr><td class="n">${e.n.map(hl).join(", ")}</td><td>${hl(title(e))}${tfTag(e)}</td><td class="s">${hl(e.s)}</td><td>${rate(e)}</td>${state.div==="all"?`<td>${badge(e)}</td>`:""}</tr>`).join("")+
+        `</tbody></table></div>`+(rest.length>LIMIT&&!state.q?`<button type="button" class="more" data-cat="${esc(cat)}" aria-expanded="${open}">${open?"Show fewer":"Show all "+rest.length}</button>`:"");
+    }
+    html+=`</section>`;
+  }
+  $("#results").innerHTML=html;
+  document.querySelectorAll(".more").forEach(b=>b.onclick=()=>{const c=b.dataset.cat;expanded.has(c)?expanded.delete(c):expanded.add(c);render()});
+}
+
+function sync(){
+  $("#q").value=state.q;$("#cat").value=state.cat;
+  document.querySelectorAll(".division button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.div===state.div));
+  document.querySelectorAll(".types input").forEach(i=>i.checked=state.types.has(i.value));
+  const p=new URLSearchParams();
+  if(state.div!=="all")p.set("div",state.div);if(state.q)p.set("q",state.q);if(state.cat)p.set("cat",state.cat);
+  if(state.types.size<4)p.set("types",[...state.types].join(","));
+  try{history.replaceState(null,"",p.toString()?"?"+p.toString():location.pathname)}catch(e){}
+}
+// Map the JSON's readable field names to the short names the render code uses.
+function fromJson(p){return{id:p.id,n:p.students,s:p.school,t:p.title,c:p.category,d:p.division==="junior"?"jr":"sr",m:p.rating,h:p.honors.map(x=>[x.type,x.name]),tf:p.thermoFisherJIC}}
+
+(async function init(){
+  try{
+    const res=await fetch(DATA_URL);
+    if(!res.ok)throw new Error(res.status+" "+res.statusText);
+    const json=await res.json();
+    DATA=json.projects.map(fromJson);
+  }catch(err){
+    $("#results").innerHTML=`<div class="empty">Couldn’t load ${DATA_URL} (${esc(err.message)}).</div>`;
+    return;
+  }
+  DATA.forEach(e=>e._h=hay(e));
+  CATS=[...new Set(DATA.map(e=>e.c))].sort();
+  CATS.forEach(c=>{const o=document.createElement("option");o.value=c;o.textContent=c;$("#cat").appendChild(o)});
+  const p=new URLSearchParams(location.search);
+  if(["jr","sr"].includes(p.get("div")))state.div=p.get("div");
+  state.q=p.get("q")||"";state.cat=CATS.includes(p.get("cat"))?p.get("cat"):"";
+  if(p.get("types"))state.types=new Set(p.get("types").split(","));
+  sync();render();
+})();
+$("#q").addEventListener("input",e=>{state.q=e.target.value.trim();sync();render()});
+$("#cat").addEventListener("change",e=>{state.cat=e.target.value;sync();render()});
+document.querySelectorAll(".division button").forEach(b=>b.addEventListener("click",()=>{state.div=b.dataset.div;sync();render()}));
+document.querySelectorAll(".types input").forEach(i=>i.addEventListener("change",()=>{i.checked?state.types.add(i.value):state.types.delete(i.value);sync();render()}));
+</script>
+</body>
+</html>
