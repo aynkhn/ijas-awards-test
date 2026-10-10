@@ -9,17 +9,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#F5F7F8; --surface:#FFFFFF; --ink:#18212C; --muted:#5B6673; --line:#DCE1E6;
-  --blue:#1F4E8C; --blue-soft:#E6EEF8; --gold:#B8861F; --gold-soft:#FBF3E0;
-  --silver:#8A949E; --bronze:#A0603A; --teal:#23766C; --teal-soft:#E3F2EF;
+  --bg:#f7f7f7; --surface:#FFFFFF; --ink:#0b3c7d; --muted:#5B6673; --line:#e6e6e6;
+  --blue:#0b3c7d; --blue-soft:#e8f0fc; --gold:#B8861F; --gold-soft:#FBF3E0;
+  --silver:#8A949E; --teal:#417b5a; --teal-soft:#e8f1ec; --red:#841619; --red-soft:#f6e6e7;
   box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#10161D; --surface:#17202A; --ink:#E7ECF1; --muted:#9AA6B2; --line:#2A3542;
-    --blue:#7FA8E0; --blue-soft:#1C2B3F; --gold:#E2B654; --gold-soft:#2E2715;
-    --silver:#AEB8C2; --bronze:#D08A5E; --teal:#6CC4B7; --teal-soft:#16302C;
+    --bg:#071a35; --surface:#0d2647; --ink:#e6e6e6; --muted:#9fb0c6; --line:#1d3a63;
+    --blue:#75a8ed; --blue-soft:#12335c; --gold:#E2B654; --gold-soft:#2E2715;
+    --silver:#AEB8C2; --teal:#7fbf98; --teal-soft:#14302a; --red:#e88a90; --red-soft:#3a1418;
   }
 }
 :root[data-theme="dark"]{
@@ -59,12 +59,12 @@ section.cat{margin:36px 0}
 .honors{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:10px;margin-bottom:18px}
 .honor{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
 .honor.has-epic{border-left-color:var(--blue)}
-.honor.has-isef{border-left-color:var(--gold)}
+.honor.has-isef{border-left-color:var(--red)}
 .awards{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
 .aw{display:inline-flex;align-items:center;gap:4px;font-weight:600;font-size:.82rem;line-height:1.3;padding:3px 8px;border-radius:5px;text-decoration:none}
 .aw-epic{background:var(--blue-soft);color:var(--blue)}
 .aw-special{background:var(--teal-soft);color:var(--teal)}
-.aw-isef{background:var(--gold-soft);color:var(--gold)}
+.aw-isef{background:var(--red-soft);color:var(--red)}
 .aw-tf{background:transparent;color:var(--muted);border:1px solid var(--line);padding:2px 7px}
 a.aw:hover{text-decoration:underline;text-underline-offset:2px}
 a.aw svg{width:.8em;height:.8em;flex:none}
@@ -88,7 +88,7 @@ td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
 td.n{font-weight:500;min-width:9em}
 td.s{color:var(--muted);min-width:10em}
 td .tag{margin-left:6px}
-mark{background:color-mix(in srgb,var(--gold) 35%,transparent);color:inherit;border-radius:2px}
+mark{background:color-mix(in srgb,#75a8ed 40%,transparent);color:inherit;border-radius:2px}
 .more{font:500 .9rem "Public Sans",system-ui,sans-serif;margin-top:8px;border:1px solid var(--line);background:var(--surface);color:var(--blue);border-radius:8px;padding:7px 14px;cursor:pointer}
 .more:hover{background:var(--blue-soft)}
 .empty{background:var(--surface);border:1px dashed var(--line);border-radius:12px;padding:28px;text-align:center;color:var(--muted);margin:36px 0}
